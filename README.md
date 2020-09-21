@@ -1,6 +1,6 @@
 # my_delivery_flutter
 
-Flutter aplication delivery
+Flutter aplication delivery following tutorial to diegoveloper
 
 ## Getting Started
 
