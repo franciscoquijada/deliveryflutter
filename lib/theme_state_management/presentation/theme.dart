@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
   static final blue = Colors.blue;
@@ -9,4 +10,10 @@ class AppColors {
   static final veryLightGray = Colors.white70;
   static final white = Colors.white;
   static final pink = Colors.pink;
+  static final red = Colors.red;
+  static final orange = Colors.orange;
+
+  static final lightTheme = ThemeData(
+      textTheme:
+          GoogleFonts.poppinsTextTheme().apply(bodyColor: AppColors.white));
 }
