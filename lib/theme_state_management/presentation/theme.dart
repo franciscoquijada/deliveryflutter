@@ -13,7 +13,9 @@ class AppColors {
   static final red = Colors.red;
   static final orange = Colors.orange;
 
+  static final gradientsColors = [AppColors.red, AppColors.orange];
+
   static final lightTheme = ThemeData(
-      textTheme:
-          GoogleFonts.poppinsTextTheme().apply(bodyColor: AppColors.white));
+      textTheme: GoogleFonts.poppinsTextTheme()
+          .apply(bodyColor: AppColors.white, displayColor: AppColors.white));
 }

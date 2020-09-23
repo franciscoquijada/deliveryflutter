@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_delivery_flutter/theme_state_management/presentation/login/login_screen.dart';
 
 import '../theme.dart';
 
@@ -9,6 +10,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
@@ -16,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [AppColors.red, AppColors.orange])),
+              colors: AppColors.gradientsColors)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,9 +39,12 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/images/deliveryLogo.png'),
             ),
           ),
-          Text('Mis Entregas',
+          Text('Entregas Francisco Quijada',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline4)
+              style: Theme.of(context)
+                  .textTheme
+                  .headline4
+                  .copyWith(fontWeight: FontWeight.bold))
         ],
       ),
     ));
